@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock PDF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input[type="file"],
+        input[type="number"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unlock Your PDF</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label for="pdf_file">Upload PDF:</label>
+        <input type="file" id="pdf_file" name="pdf_file" required><br>
+
+        <label for="password_length">Password Length:</label>
+        <input type="number" id="password_length" name="password_length" required><br>
+
+        <label for="password_type">Password Type:</label><br>
+        <input type="checkbox" id="letters" name="password_type" value="letters">
+        <label for="letters">Letters (A-Z)</label><br>
+        <input type="checkbox" id="digits" name="password_type" value="digits">
+        <label for="digits">Digits (0-9)</label><br><br>
+
+        <button type="submit">Unlock PDF</button>
+    </form>
+</body>
+
+</html>
